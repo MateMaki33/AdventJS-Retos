@@ -1,9 +1,13 @@
 function findNaughtyStep(original, modified) {
-  // Code here
+  // AQUI ME HE LIADO UN PELIN :)
+
+  //Hay mejores formas pero...
+  
   let areEquals = true;
   let originalMayor = false;
   let emptyString = original.length ===0;
-  
+
+  //Comprobamos longitudes de las cadenas para ver elementos faltantes o de sobra
   if(original.length > modified.length){
     areEquals = false;
     originalMayor = true;
@@ -12,7 +16,9 @@ function findNaughtyStep(original, modified) {
     areEquals = false;
     originalMayor = false;
   }
- 
+ //-------------------------------------------------------------------------------
+
+  //Si la cadena no esta vacía
   if(!emptyString){
 
      if(!originalMayor && !areEquals){
@@ -34,5 +40,9 @@ function findNaughtyStep(original, modified) {
    } 
   }
 
+  //si la cadena original esta vacia se devuelve el primer caracter de modified
+  //si son iguales se devuelve ""
    return emptyString ? modified[0] : "";
 }
+
+// 120 puntos
